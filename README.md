@@ -1,4 +1,4 @@
-# BitwokRTC - WebRTC en FileMaker
+# Bitwok - Generador de codigos QR en FileMaker
 
 ## Requisitos
 
