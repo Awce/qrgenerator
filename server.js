@@ -5,6 +5,7 @@ const QRCode = require("qrcode");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Ruta para generar el código QR
 app.get("/generate", async (req, res) => {
   const url = req.query.url;
 
@@ -13,17 +14,24 @@ app.get("/generate", async (req, res) => {
   }
 
   try {
-    const qrCodeData = await QRCode.toDataURL(url);
-    res.send(`
-            <h1>Bitwok | QR Code Generator</h1>
-            <p>URL: ${url}</p>
-            <img src="${qrCodeData}" />
-        `);
+    // Generar el código QR con tamaño personalizado (150x150 px)
+    const qrCodeData = await QRCode.toDataURL(url, { width: 150 });
+
+    // Establecer el tipo de contenido para que sea una imagen
+    res.setHeader("Content-Type", "image/png");
+
+    // Enviar el código QR como una imagen
+    const imgData = qrCodeData.replace(/^data:image\/png;base64,/, "");
+    const imgBuffer = Buffer.from(imgData, "base64");
+
+    // Enviar la imagen en formato binario
+    res.send(imgBuffer);
   } catch (err) {
     res.status(500).send("Error generating QR code");
   }
 });
 
+// Iniciar el servidor
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
