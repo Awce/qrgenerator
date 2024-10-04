@@ -1,4 +1,4 @@
-# Bitwok - Generador de codigos QR en FileMaker
+# Bitwok - Generador de codigos QR
 
 ## Requisitos
 
