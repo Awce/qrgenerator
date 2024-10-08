@@ -1,4 +1,4 @@
-# Bitwok - Generador de codigos QR
+#Generador de codigos QR
 
 ## Requisitos
 
