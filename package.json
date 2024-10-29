@@ -1,7 +1,7 @@
 {
-  "name": "bitwokqrgenerator",
+  "name": "qrgenerator",
   "version": "1.0.0",
-  "description": "Bitwok | Generador de Codigos QR para facturacion electronica",
+  "description": "Generador de Códigos QR y Generador de Códigos de Barra",
   "main": "index.js",
   "author": "awce",
   "license": "MIT",
