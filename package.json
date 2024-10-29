@@ -2,7 +2,7 @@
   "name": "qrgenerator",
   "version": "1.0.0",
   "description": "Generador de Códigos QR y Generador de Códigos de Barra",
-  "main": "index.js",
+  "main": "server.js",
   "author": "awce",
   "license": "MIT",
   "scripts": {
